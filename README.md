@@ -11,7 +11,7 @@ Driver for LSM303 3-axis accelerometer and magnetometer sensor.
 ## Installation
 
 ```sh
-idf.py add-dependency "esp-idf-lib/lsm303^1.0.0
+idf.py add-dependency esp-idf-lib/lsm303^1.0.0
 ```
 
 ## Support
