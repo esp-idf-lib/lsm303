@@ -1,7 +1,7 @@
 ---
 name: lsm303
 description: Driver for LSM303 3-axis accelerometer and magnetometer sensor
-version: 1.0.3
+version: 1.0.4
 groups:
   - imu
   - magnetic
