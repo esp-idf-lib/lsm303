@@ -1,5 +1,5 @@
 ---
-version: 1.0.6
+version: 1.0.7
 description: Driver for LSM303 3-axis accelerometer and magnetometer sensor
 license: BSD-3
 targets:
