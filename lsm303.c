@@ -248,12 +248,12 @@ esp_err_t lsm303_init(lsm303_t *dev)
     I2C_DEV_CHECK(&dev->i2c_dev_acc, i2c_dev_write_reg(&dev->i2c_dev_acc, LSM303_REG_ACC_CTRL_REG1_A, &v, 1));
 
     /* setup CTRL_REG4
-        [7]		BDU			- Block Data Update
-        [6]		BLE			- Big/Little Endian Data Selection
-        [5:4]	FS1 FS0		- Full Scale selection
-        [3]		HR			- High Resolution
-        [2:1]	ST1 ST0		- Self Test Enable
-        [0]		SIM			- SIM SPI Serial Interface Mode selection
+        [7]     BDU         - Block Data Update
+        [6]     BLE         - Big/Little Endian Data Selection
+        [5:4]   FS1 FS0     - Full Scale selection
+        [3]     HR          - High Resolution
+        [2:1]   ST1 ST0     - Self Test Enable
+        [0]     SIM         - SIM SPI Serial Interface Mode selection
 
     */
     v = 0x00;
@@ -348,7 +348,8 @@ esp_err_t lsm303_acc_raw_to_g(lsm303_t *dev, lsm303_acc_raw_data_t *raw, lsm303_
 {
     CHECK_ARG(dev && raw && data);
 
-    static const float lsb[][4] = {
+    static const float lsb[][4] =
+    {
         [LSM303_ACC_MODE_NORMAL] = {
             [LSM303_ACC_SCALE_2G] = 0.0039,
             [LSM303_ACC_SCALE_4G] = 0.00782,
@@ -368,7 +369,8 @@ esp_err_t lsm303_acc_raw_to_g(lsm303_t *dev, lsm303_acc_raw_data_t *raw, lsm303_
             [LSM303_ACC_SCALE_16G] = 0.18758
         },
     };
-    static const int shift[] = {
+    static const int shift[] =
+    {
         [LSM303_ACC_MODE_NORMAL] = 6,          // 10-bit
         [LSM303_ACC_MODE_HIGH_RESOLUTION] = 4, // 12-bit
         [LSM303_ACC_MODE_LOW_POWER] = 8        // 8-bit
@@ -447,7 +449,8 @@ esp_err_t lsm303_mag_raw_to_uT(lsm303_t *dev, lsm303_mag_raw_data_t *raw, lsm303
     /* gain for XY axis is different from Z axis */
     enum { GAIN_XY = 0, GAIN_Z = 1 };
     /*  { xy , z} */
-    static const float gauss_lsb[][2] = {
+    static const float gauss_lsb[][2] =
+    {
         [LSM303_MAG_GAIN_1_3] = { 1100, 980 },
         [LSM303_MAG_GAIN_1_9] = { 855, 760 },
         [LSM303_MAG_GAIN_2_5] = { 670, 600 },

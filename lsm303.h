@@ -58,7 +58,8 @@ extern "C" {
 /**
  * Accelerometer modes
  */
-typedef enum {
+typedef enum
+{
     LSM303_ACC_MODE_NORMAL,          //!< Normal measurement mode; 10-bit
     LSM303_ACC_MODE_HIGH_RESOLUTION, //!< High resolution mode; 12-bit
     LSM303_ACC_MODE_LOW_POWER,       //!< Low power mode; 8-bit
@@ -67,7 +68,8 @@ typedef enum {
 /**
  * Accelerometer data rates
  */
-typedef enum {
+typedef enum
+{
     LSM303_ODR_POWER_DOWN = 0b0000, //!< Power-down mode
     LSM303_ODR_1_HZ = 0b0001,       //!< Normal / low-power mode (1 Hz)
     LSM303_ODR_10_HZ = 0b0010,      //!< Normal / low-power mode (10 Hz)
@@ -83,7 +85,8 @@ typedef enum {
 /**
  * Accelerometer scales
  */
-typedef enum {
+typedef enum
+{
     LSM303_ACC_SCALE_2G = 0b00, //!< 1 mg/LSB, +- 2G
     LSM303_ACC_SCALE_4G = 0b01, //!< 2 mg/LSB, +- 4G
     LSM303_ACC_SCALE_8G = 0b10, //!< 4 mg/LSB, +- 8G
@@ -93,7 +96,8 @@ typedef enum {
 /**
  * Magnetometer modes
  */
-typedef enum {
+typedef enum
+{
     LSM303_MAG_MODE_CONT = 0x00,   //!< Continuous-conversion mode
     LSM303_MAG_MODE_SINGLE = 0x01, //!< Single-conversion mode
     LSM303_MAG_MODE_SLEEP1 = 0x02, //!< Sleep-mode. Device is placed in sleep-mode
@@ -103,7 +107,8 @@ typedef enum {
 /**
  * Magnetometer rates
  */
-typedef enum {
+typedef enum
+{
     LSM303_MAG_RATE_0_75, //!< 0.75 Hz
     LSM303_MAG_RATE_1_5,  //!< 1.5 Hz
     LSM303_MAG_RATE_3_0,  //!< 3.0 Hz
@@ -117,7 +122,8 @@ typedef enum {
 /**
  * Magnetometer gains
  */
-typedef enum {
+typedef enum
+{
     LSM303_MAG_GAIN_1_3, //!< +/- 1.3
     LSM303_MAG_GAIN_1_9, //!< +/- 1.9
     LSM303_MAG_GAIN_2_5, //!< +/- 2.5
